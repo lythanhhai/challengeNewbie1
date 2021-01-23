@@ -1,0 +1,250 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+section .work {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 50rem;
+  height: 34rem;
+  background-color: rgba(246, 238, 238, 0.911);
+  margin: 2rem auto;
+}
+section .work__logo {
+  width: 3rem;
+  height: 1rem;
+  margin: 1rem auto 1.5rem;
+}
+section .work__title {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+  color: #969696;
+}
+section .work__text {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+section .work__image {
+  width: 28rem;
+  height: 17rem;
+  object-fit: cover;
+  margin: 1.8rem auto 1rem;
+}
+section .work__form {
+  text-align: center;
+  position: relative;
+}
+section .work__form-input {
+  outline: none;
+  border-radius: 1rem;
+  border: 1.5px solid transparent;
+  width: 14rem;
+  height: 2rem;
+}
+section .work__form-label::before {
+  content: "Please provide a valid email address ";
+  opacity: 0;
+  visibility: hidden;
+  font-size: 0.6rem;
+  color: #ff5263;
+  position: absolute;
+  top: 110%;
+  left: 30%;
+}
+section .work__form #button {
+  border-radius: 1rem;
+  width: 6rem;
+  height: 2rem;
+  background-color: #4f7df3;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  margin-left: 0.6rem;
+  transition: all 0.25s linear;
+}
+section .work__form #button:hover {
+  background-color: #c2d3ff;
+  color: rgba(255, 255, 255, 0.562);
+  box-shadow: 2px 0 5px 0px black;
+}
+section .work__social {
+  display: flex;
+  flex-direction: column;
+}
+section .work__social ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: -1rem;
+}
+section .work__social ul li {
+  margin-left: 1rem;
+  cursor: pointer;
+}
+section .work__social ul li i {
+  border: 1px solid #e7e7e7;
+  padding: 0.7rem;
+  border-radius: 50%;
+  transition: all 0.25s linear;
+  color: #4f7df3;
+}
+section .work__social ul li i:hover {
+  background-color: #4f7df3;
+  border: 1px solid #4f7df3;
+  color: white;
+}
+section .work__social ul li .fa-facebook-f {
+  border: 1px solid #e7e7e7;
+  padding: 0.7rem 0.95rem;
+  border-radius: 50%;
+  transition: all 0.25s linear;
+}
+section .work__social ul li .fa-facebook-f:hover {
+  background-color: #4f7df3;
+  border: 1px solid #4f7df3;
+  color: white;
+}
+section .work__social-note {
+  text-align: center;
+  margin-top: 0.2rem;
+  font-size: 0.7rem;
+  color: #969696;
+}
+
+@media screen and (max-width: 767px) {
+  section .work {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 16.5rem;
+    height: 36rem;
+    background-color: rgba(246, 238, 238, 0.911);
+    margin: 2rem auto;
+  }
+  section .work__logo {
+    width: 3rem;
+    height: 1rem;
+    margin: 1rem auto 1.5rem;
+  }
+  section .work__title {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+    color: #969696;
+  }
+  section .work__text {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+  section .work__image {
+    width: 14rem;
+    height: 8.5rem;
+    object-fit: cover;
+    margin: 1.8rem auto 1rem;
+  }
+  section .work__form {
+    text-align: center;
+    position: relative;
+  }
+  section .work__form-input {
+    outline: none;
+    border-radius: 1rem;
+    border: 1.5px solid transparent;
+    width: 14rem;
+    height: 2rem;
+  }
+  section .work__form-label::before {
+    content: "Please provide a valid email address ";
+    opacity: 0;
+    visibility: hidden;
+    font-size: 0.6rem;
+    color: #ff5263;
+    position: absolute;
+    top: 110%;
+    left: 30%;
+  }
+  section .work__form #button {
+    border-radius: 1rem;
+    width: calc(14rem - 2px);
+    height: 2rem;
+    background-color: #4f7df3;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    margin-top: 1.5rem;
+    transition: all 0.25s linear;
+    text-align: center;
+  }
+  section .work__form #button:hover {
+    background-color: #c2d3ff;
+    color: rgba(255, 255, 255, 0.562);
+    box-shadow: 2px 0 5px 0px black;
+  }
+  section .work__social {
+    display: flex;
+    flex-direction: column;
+  }
+  section .work__social ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: -1rem;
+  }
+  section .work__social ul li {
+    margin-left: 1rem;
+    cursor: pointer;
+  }
+  section .work__social ul li i {
+    border: 1px solid #e7e7e7;
+    padding: 0.7rem;
+    border-radius: 50%;
+    transition: all 0.25s linear;
+    color: #4f7df3;
+  }
+  section .work__social ul li i:hover {
+    background-color: #4f7df3;
+    border: 1px solid #4f7df3;
+    color: white;
+  }
+  section .work__social ul li .fa-facebook-f {
+    border: 1px solid #e7e7e7;
+    padding: 0.7rem 0.95rem;
+    border-radius: 50%;
+    transition: all 0.25s linear;
+  }
+  section .work__social ul li .fa-facebook-f:hover {
+    background-color: #4f7df3;
+    border: 1px solid #4f7df3;
+    color: white;
+  }
+  section .work__social-note {
+    text-align: center;
+    margin-top: 0.2rem;
+    font-size: 0.7rem;
+    color: #969696;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

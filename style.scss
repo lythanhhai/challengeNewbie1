@@ -1,0 +1,307 @@
+html {
+    font-size: 62.5%;
+  }
+  *
+  {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Poppins', sans-serif;
+    
+  }
+  a {
+    text-decoration: none;
+  }
+  @mixin size($width, $height) {
+    width: $width;
+    height: $height;
+  }
+  @mixin flexCen($align, $just, $wrap, $direct) {
+    display: flex;
+    align-items: $align;
+    justify-content: $just;
+    flex-wrap: $wrap;
+    flex-direction: $direct;
+  }
+
+  section
+  {
+     .work
+     {
+         display: flex;
+         justify-content: center;
+         flex-direction: column;
+         @include size(50rem,34rem);
+         background-color: hsla(0, 30%, 95%, 0.911);
+         margin:2rem auto;
+         &__logo
+         {
+             @include size(3rem,1rem);
+             margin:1rem auto 1.5rem;
+         }
+         &__title
+         {
+             text-align: center;
+             margin-bottom: 0.5rem;
+             font-size: 1.4rem;
+             color:hsl(0, 0%, 59%);
+         }
+         &__text
+         {
+            text-align: center;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+         }
+         &__image
+         {
+             @include size(28rem,17rem);
+             object-fit:cover;
+             margin:1.8rem auto 1rem;
+         }
+         &__form
+         {
+             text-align: center;
+             position: relative;
+             &-input
+             {
+                 outline: none;
+                 border-radius: 1rem;
+                 border:1.5px solid transparent;
+                 @include size(14rem,2rem);
+             }
+             &-label
+             {
+                 &::before
+                 {
+                     content: "Please provide a valid email address ";
+                     opacity: 0;
+                     visibility: hidden;
+                    font-size: 0.6rem;
+                    color:hsl(354, 100%, 66%);
+                    position: absolute;
+                    top:110%;
+                    left:30%;
+                 }
+                 
+                 
+                }
+                #button
+                {
+                    border-radius: 1rem;
+                    @include size(6rem,2rem);
+                    background-color: hsl(223, 87%, 63%);
+                    color:white;
+                    outline:none;
+                    cursor: pointer;
+                    border:1px solid transparent;
+                    margin-left: 0.6rem;
+                    transition: all 0.25s linear;
+                    &:hover
+                    {
+                        background-color: hsl(223, 100%, 88%);;
+                        color:rgba(255, 255, 255, 0.562);
+                        box-shadow: 2px 0 5px 0px black;
+                    }
+                }
+         }
+         &__social
+         {
+             display: flex;
+             flex-direction: column;
+             ul
+             {
+                 display: flex;
+                 flex-direction: row;
+                 justify-content: center;
+                 align-items: center;
+                 margin-left: -1rem;
+                 li
+                 {
+                     margin-left: 1rem;
+                     cursor: pointer;
+                     
+                     i
+                     {
+                         border:1px solid rgb(231, 231, 231);
+                         padding:0.7rem;
+                         border-radius: 50%;
+                         transition:all 0.25s linear;
+                         color:hsl(223, 87%, 63%);
+                        
+                         &:hover
+                         {
+                         background-color: hsl(223, 87%, 63%);
+                         border:1px solid hsl(223, 87%, 63%);
+                         color:white;
+                         }
+                     }
+                     .fa-facebook-f
+                     {
+                        border:1px solid rgb(231, 231, 231);
+                        padding:0.7rem 0.95rem;
+                        border-radius: 50%;
+                        transition:all 0.25s linear;
+                        &:hover
+                        {
+                         background-color: hsl(223, 87%, 63%);
+                         border:1px solid hsl(223, 87%, 63%);
+                         color:white;
+                        }
+                     }
+                 }
+             }
+             &-note
+             {
+                 text-align: center;
+                 margin-top: 0.2rem;
+                 font-size: 0.7rem;
+                 color:hsl(0, 0%, 59%);
+             }
+
+         }
+     }
+  }
+
+  @media screen and (max-width:767px)
+  {
+    section
+    {
+       .work
+       {
+           display: flex;
+           justify-content: center;
+           flex-direction: column;
+           @include size(16.5rem,36rem);
+           background-color: hsla(0, 30%, 95%, 0.911);
+           margin:2rem auto;
+           &__logo
+           {
+               @include size(3rem,1rem);
+               margin:1rem auto 1.5rem;
+           }
+           &__title
+           {
+               text-align: center;
+               margin-bottom: 0.5rem;
+               font-size: 1.4rem;
+               color:hsl(0, 0%, 59%);
+           }
+           &__text
+           {
+              text-align: center;
+              font-size: 0.9rem;
+              margin-bottom: 1.5rem;
+           }
+           &__image
+           {
+               @include size(14rem,8.5rem);
+               object-fit:cover;
+               margin:1.8rem auto 1rem;
+           }
+           &__form
+           {
+               text-align: center;
+               position: relative;
+               &-input
+               {
+                   outline: none;
+                   border-radius: 1rem;
+                   border:1.5px solid transparent;
+                   @include size(14rem,2rem);
+               }
+               &-label
+               {
+                   &::before
+                   {
+                       content: "Please provide a valid email address ";
+                       opacity: 0;
+                       visibility: hidden;
+                      font-size: 0.6rem;
+                      color:hsl(354, 100%, 66%);
+                      position: absolute;
+                      top:110%;
+                      left:30%;
+                   }
+                   
+                   
+                  }
+                  #button
+                  {
+                      border-radius: 1rem;
+                      @include size(calc(14rem - 2px),2rem);
+                      background-color: hsl(223, 87%, 63%);
+                      color:white;
+                      outline:none;
+                      cursor: pointer;
+                      border:1px solid transparent;
+                      margin-top: 1.5rem;
+                      transition: all 0.25s linear;
+                      text-align: center;
+                      &:hover
+                      {
+                          background-color: hsl(223, 100%, 88%);;
+                          color:rgba(255, 255, 255, 0.562);
+                          box-shadow: 2px 0 5px 0px black;
+                      }
+                  }
+           }
+           &__social
+           {
+               display: flex;
+               flex-direction: column;
+               ul
+               {
+                   display: flex;
+                   flex-direction: row;
+                   justify-content: center;
+                   align-items: center;
+                   margin-left: -1rem;
+                   li
+                   {
+                       margin-left: 1rem;
+                       cursor: pointer;
+                       
+                       i
+                       {
+                           border:1px solid rgb(231, 231, 231);
+                           padding:0.7rem;
+                           border-radius: 50%;
+                           transition:all 0.25s linear;
+                           color:hsl(223, 87%, 63%);
+                          
+                           &:hover
+                           {
+                           background-color: hsl(223, 87%, 63%);
+                           border:1px solid hsl(223, 87%, 63%);
+                           color:white;
+                           }
+                       }
+                       .fa-facebook-f
+                       {
+                          border:1px solid rgb(231, 231, 231);
+                          padding:0.7rem 0.95rem;
+                          border-radius: 50%;
+                          transition:all 0.25s linear;
+                          &:hover
+                          {
+                           background-color: hsl(223, 87%, 63%);
+                           border:1px solid hsl(223, 87%, 63%);
+                           color:white;
+                          }
+                       }
+                   }
+               }
+               &-note
+               {
+                   text-align: center;
+                   margin-top: 0.2rem;
+                   font-size: 0.7rem;
+                   color:hsl(0, 0%, 59%);
+               }
+  
+           }
+       }
+    }
+  }
